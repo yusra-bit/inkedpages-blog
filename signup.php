@@ -4,6 +4,12 @@
       <div class="row">
         <div class="mx-auto col-10 col-md-8 col-lg-6">
           <!-- Form -->
+          <?php 
+       include 'users.php';
+       $users = new User();
+       $register = $users->register();
+
+       ?>
           <form class="form-example" action="" method="post">
             <h1>Registration Form</h1>
             
@@ -13,8 +19,7 @@
               <input
                 type="text"
                 class="form-control username"
-                id="username"
-                placeholder="Username"
+                
                 name="username"
               />
             </div>
@@ -23,8 +28,7 @@
               <input
                 type="text"
                 class="form-control email"
-                id="email"
-                placeholder="Email..."
+               
                 name="email"
               />
             </div>
@@ -33,19 +37,18 @@
               <input
                 type="password"
                 class="form-control password"
-                id="password"
-                placeholder="Password"
+                
                 name="password"
               />
             </div>
-            <div class="form-group">
+          <!--  <div class="form-group">
             <label for="formFile">Avatar:</label>
 
             <input class="form-control" type="file" id="formFile">
 
-            </div>
+            </div> -->
 
-            <button type="submit" class="btn btn-dark btn-customized mt-4">
+            <button type="submit" name="signup" class="btn btn-dark btn-customized mt-4">
               Sign Up
             </button>
           </form>
